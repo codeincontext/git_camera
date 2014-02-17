@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require 'git_camera'
+
+pointless_ascii_camera = <<-EOS
+              ____
+         _[]_/____\\__n_
+        |_____.--.__()_|
+        |LI  //# \\\\    |
+        |    \\\\__//    |
+        |     '--'     |
+        '--------------'
+EOS
+# borrowed without much asking from http://www.chris.com/ascii/index.php?art=objects%2Fcameras
+puts pointless_ascii_camera
+
+config = GitCamera::Config.new
+if config.exists?
+  capture_session = GitCamera::CaptureSession.new
+  config.load_to_session(capture_session)
+  capture_session.start_capture
+else
+  config.init_project
+  puts "It looks like this is the first time you've used git-camera on this project. Default config has been initialised to git-camera/git-cam.conf. Run this again to start capturing"
+end
