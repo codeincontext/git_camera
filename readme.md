@@ -1,7 +1,7 @@
 git_camera
 ===
 
-Have you ever finished a website and thought about how the design/build has evolved to get where it is now? Well git-camera is for you!
+Have you ever finished a website and thought about how the design/build has evolved to get where it is now? Well git_camera is for you!
 
 git_camera goes through your (web) project's git commits, and records a video of how the interface has changed over time. It's a little window into your build process - Use it for your own curiosity, show it to your client, your boss, investors, your cat, or your therapist.
 
@@ -30,8 +30,7 @@ Usage
     cd project_directory
     git_camera
 
-I'd recommend a config file. *Note: Actually, right now you need a config file in your project's directory. There's an example in the repo.*
-
+When you first run it, it will create a `git_camera` directory with a config file. Make sure to set the project's URL, and any setup that may be required.
 
 If you need any help with this, I'm @skattyadz on Twitter
 

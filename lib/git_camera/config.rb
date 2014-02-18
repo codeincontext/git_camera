@@ -10,14 +10,14 @@ module GitCamera
 
     def load_to_session(capture_session)
       @c = capture_session
-      instance_eval(File.read('git_camera/default_config.rb'))
+      instance_eval(File.read('git_camera/config.rb'))
     end
 
     def init_project
       FileUtils.mkdir('git_camera')
 
       default_conf_location = File.expand_path("../../default_config.rb", __FILE__)
-      FileUtils.cp(default_conf_location, 'git_camera/default_config.rb')
+      FileUtils.cp(default_conf_location, 'git_camera/config.rb')
     end
 
   private
